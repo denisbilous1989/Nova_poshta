@@ -1,7 +1,7 @@
-import Btn from '../shared/Btn/component';
 import TtnNumber from '../Pages/Ttn-number'
 import Branches from '../Pages/Branches'
-import { Routes, Route, Outlet } from 'react-router-dom'
+import Home from '../Pages/Home'
+import { Routes, Route } from 'react-router-dom'
 
 import './styles.scss';
 
@@ -9,7 +9,7 @@ const Main = () => {
   return (
     <main>
       <Routes>
-          <Route path='/' />
+          <Route path='/' element={<Home />}/>
           <Route path='ttn' element={<TtnNumber/>}/>
           <Route path='branches' element={<Branches/>}/>
       </Routes>
