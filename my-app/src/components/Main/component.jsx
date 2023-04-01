@@ -8,11 +8,11 @@ import './styles.scss';
 const Main = () => {
   return (
     <main>
-
-    <Routes>
-        <Route path='ttn' element={<TtnNumber/>}/>
-        <Route path='branches' element={<Branches/>}/>
-    </Routes>
+      <Routes>
+          <Route path='/' />
+          <Route path='ttn' element={<TtnNumber/>}/>
+          <Route path='branches' element={<Branches/>}/>
+      </Routes>
     </main>
   );
 }

@@ -4,15 +4,19 @@
 
   .menu {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 
     &__btn {
-      margin: 20px 40px;
+      margin: 20px 65px 0px 0;
       padding: 15px 30px;
       cursor: pointer;
       border: 2px solid black;
       background-color: darkgrey;
+
+      &:hover {
+        background-color: gray;
+      }
     }
   }
 }
