@@ -1,3 +1,5 @@
+import './styles.scss'
+
 const Home = () => {
   return (
     <div className="container">

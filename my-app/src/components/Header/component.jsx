@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 import './styles.scss';
 
@@ -7,10 +7,8 @@ const Header = () => (
       <div className="container">
         <nav className='navigation'>
             <ul className='menu'>
-              {/* <li className='menu__item'><button className='menu__btn menu__btn--ttn'>Перевірити ТТН</button></li> */}
-              <li className='menu__item'><Link to='ttn' className='menu__btn menu__btn--ttn'>Перевірити ТТН</Link></li>
-              <li className='menu__item'><Link to='branches' className='menu__btn menu__btn--branches'>Список відділень</Link></li>
-              {/* <li className='menu__item'><button className='menu__btn menu__btn--branches'>Список відділень</button></li> */}
+              <li className='menu__item'><NavLink to='ttn' className={({isActive}) => isActive ? 'menu__btn dark' : 'menu__btn light'}>Перевірити ТТН</NavLink></li>
+              <li className='menu__item'><NavLink to='branches' className={({isActive}) => isActive ? 'menu__btn dark' : 'menu__btn light'}>Список відділень</NavLink></li>
             </ul>
         </nav>
       </div>
