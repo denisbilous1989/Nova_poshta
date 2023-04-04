@@ -1,8 +1,41 @@
 import Btn from '../../shared/Btn'
 
+import { KEY, URL } from '../../../constans'
+
+
+import { useEffect } from "react"
+
 import './styles.scss'
 
 const TtnNumber = () => {
+
+
+
+  useEffect(() => {
+    fetch(URL, {
+       method: 'POST',
+        body: {
+          "apiKey": KEY,
+          "modelName": "TrackingDocument",
+          "calledMethod": "getStatusDocuments",
+          "methodProperties": {
+            "Documents": [
+              {
+                "DocumentNumber": "59000950733809",
+                "Phone": ""
+              }
+            ]
+          }
+        },
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      }
+
+    }).then(response => response.json()).
+    then(result => console.log(result, 'result'))
+  })
+
+
   return (
     <div className="container">
       <form className='form'>
