@@ -1,7 +1,9 @@
+import { Routes, Route } from 'react-router-dom'
+
 import TtnNumber from '../Pages/Ttn-number'
 import Branches from '../Pages/Branches'
 import Home from '../Pages/Home'
-import { Routes, Route } from 'react-router-dom'
+import Error from '../Pages/Error'
 
 import './styles.scss';
 
@@ -9,9 +11,10 @@ const Main = () => {
   return (
     <main>
       <Routes>
-          <Route path='/' element={<Home />}/>
+          <Route path='/' element={<Home />}></Route>
           <Route path='ttn' element={<TtnNumber/>}/>
           <Route path='branches' element={<Branches/>}/>
+          <Route path='*' element={<Error/>}/>
       </Routes>
     </main>
   );
