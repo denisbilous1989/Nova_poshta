@@ -1,0 +1,23 @@
+.box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 20px;
+
+  .status,
+  .history {
+    border: 1pz solid black;
+    background-color: #aaa;
+    padding: 10px 20px;
+  }
+
+  .status {
+    align-self: stretch;
+    margin-right: 20px;
+  }
+}
+
+
+.first-word {
+  font-weight: bold;
+}
